@@ -1,51 +1,83 @@
 <!DOCTYPE html>
 <html>
 <head>
-<title>महत्त्वाची सूचना</title>
+<title>Premium Cinematic</title>
 
 <style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
+
 body{
-  background:#000;
-  color:white;
-  font-family:Arial;
-  text-align:center;
-  padding:30px;
+background:#000;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+}
+
+.logo{
+position:absolute;
+top:25px;
+left:50%;
+transform:translateX(-50%);
+font-size:28px;
+font-weight:bold;
+color:#FFD700;
 }
 
 .box{
-  background:rgba(255,255,255,0.08);
-  padding:25px;
-  border-radius:20px;
-  border:1px solid #555;
-  max-width:500px;
-  margin:auto;
+background:#111;
+padding:30px;
+border-radius:25px;
+border:1px solid #FFD700;
+width:90%;
+max-width:550px;
+text-align:center;
 }
 
 h1{
-  margin-bottom:20px;
+color:#FFD700;
+font-size:30px;
+margin-bottom:25px;
 }
 
-button{
-  margin-top:25px;
-  padding:12px 30px;
-  border-radius:30px;
-  background:white;
-  color:black;
-  border:none;
+p{
+font-size:18px;
+line-height:1.7;
+margin-bottom:12px;
 }
+
+.btn{
+display:inline-block;
+margin-top:20px;
+padding:14px 40px;
+background:#FFD700;
+color:#000;
+border-radius:50px;
+text-decoration:none;
+font-weight:bold;
+}
+
 </style>
-
 </head>
 
 <body>
 
-<h1>महत्त्वाची सूचना</h1>
+<div class="logo">👑 Premium Cinematic</div>
 
 <div class="box">
 
+<h1>महत्त्वाची सूचना</h1>
+
 <p>कृपया Partial Payment करू नका.</p>
 
-<p>QR Code वर दाखवलेली पूर्ण रक्कम एकाच व्यवहारात भरा.</p>
+<p>QR Code वर दाखवलेली पूर्ण रक्कम भरा.</p>
 
 <p>Payment झाल्यानंतर Screenshot WhatsApp वर पाठवा.</p>
 
@@ -53,11 +85,11 @@ button{
 
 <p>Password टाकल्यानंतर तुमचा Video Unlock होईल.</p>
 
-<p>तुमची Link आणि Password कोणाशीही Share करू नका.</p>
+<p>Link आणि Password कोणाशीही Share करू नका.</p>
+
+<a class="btn" href="payment.html">Continue</a>
 
 </div>
 
-<button>Continue</button>
-
 </body>
-</html> 
+</html>
