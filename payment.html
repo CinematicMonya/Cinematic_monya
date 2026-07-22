@@ -1,24 +1,208 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<title>Payment</title>
+
+<title>Premium Cinematic Payment</title>
+
+<style>
+
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:'Arial',sans-serif;
+}
+
+body{
+
+background:#000;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+}
+
+
+.box{
+
+width:95%;
+max-width:650px;
+background:#111;
+padding:40px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 0 40px red;
+
+}
+
+
+.logo{
+
+font-size:32px;
+font-weight:bold;
+letter-spacing:2px;
+margin-bottom:20px;
+
+}
+
+
+h1{
+
+font-size:42px;
+color:red;
+margin-bottom:20px;
+
+}
+
+
+.amount{
+
+font-size:38px;
+font-weight:bold;
+margin:20px;
+color:#fff;
+
+}
+
+
+.qr{
+
+width:320px;
+height:320px;
+background:white;
+padding:15px;
+border-radius:25px;
+margin:25px auto;
+
+}
+
+
+.qr img{
+
+width:100%;
+height:100%;
+object-fit:contain;
+
+}
+
+
+.details{
+
+background:#1b1b1b;
+padding:25px;
+border-radius:20px;
+margin-top:25px;
+
+}
+
+
+.details p{
+
+font-size:20px;
+line-height:1.8;
+margin-bottom:10px;
+
+}
+
+
+.warning{
+
+color:red;
+font-weight:bold;
+
+}
+
+
+button{
+
+margin-top:30px;
+padding:18px 50px;
+background:red;
+color:white;
+border:none;
+border-radius:50px;
+font-size:22px;
+font-weight:bold;
+
+}
+
+
+</style>
+
 </head>
 
-<body style="background:#000;color:white;text-align:center;padding:40px;font-family:Arial;">
 
-<h1 style="color:gold;">💳 Payment</h1>
+<body>
 
-<p>Scan QR & Complete Payment</p>
 
-<img src="qr.png" width="250">
+<div class="box">
 
-<br><br>
 
-<a href="unlock.html">
-<button style="padding:15px 40px;background:#00c853;color:white;border-radius:30px;">
-Payment Done
+<div class="logo">
+CINEMATIC MONYAA
+</div>
+
+
+<h1>
+Payment
+</h1>
+
+
+<div class="amount">
+₹ 999
+</div>
+
+
+<div class="qr">
+
+<img src="YOUR_QR_IMAGE.png">
+
+</div>
+
+
+<div class="details">
+
+
+<p>
+✅ QR Scan करून Payment करा
+</p>
+
+
+<p>
+✅ फक्त पूर्ण Amount Payment करा
+</p>
+
+
+<p class="warning">
+❌ Partial Payment करू नका
+</p>
+
+
+<p>
+Payment झाल्यावर Screenshot WhatsApp वर पाठवा
+</p>
+
+
+<p>
+Payment Verify झाल्यावर Password मिळेल
+</p>
+
+
+</div>
+
+
+<button onclick="location.href='unlock.html'">
+Payment Completed
 </button>
-</a>
+
+
+</div>
+
 
 </body>
+
 </html>
