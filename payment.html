@@ -3,7 +3,7 @@
 
 <head>
 
-<title>Unlock Your Video</title>
+<title>Premium Cinematic Payment</title>
 
 <style>
 
@@ -30,9 +30,9 @@ padding:20px;
 .box{
 
 width:95%;
-max-width:600px;
+max-width:650px;
 background:#111;
-padding:45px;
+padding:40px;
 border-radius:30px;
 text-align:center;
 box-shadow:0 0 40px red;
@@ -40,59 +40,76 @@ box-shadow:0 0 40px red;
 }
 
 
-h1{
+.logo{
 
-font-size:45px;
-color:red;
+font-size:32px;
+font-weight:bold;
 margin-bottom:25px;
 
 }
 
 
-p{
+h1{
 
-font-size:22px;
-line-height:1.6;
+color:red;
+font-size:42px;
+margin-bottom:30px;
 
 }
 
 
-input{
+.qr-box{
 
-margin-top:35px;
-width:90%;
-padding:18px;
-border-radius:50px;
-border:none;
-font-size:20px;
-text-align:center;
+background:white;
+padding:25px;
+border-radius:25px;
+display:inline-block;
+
+}
+
+
+.qr-box img{
+
+width:420px;
+height:420px;
+object-fit:contain;
 
 }
 
 
 button{
 
-margin-top:30px;
-padding:18px 45px;
+width:90%;
+padding:18px;
+margin-top:25px;
 border:none;
 border-radius:50px;
 background:red;
 color:white;
 font-size:22px;
 font-weight:bold;
-cursor:pointer;
 
 }
 
 
-#error{
+.download{
 
-margin-top:20px;
-color:red;
-font-size:20px;
+background:#222;
+border:2px solid red;
 
 }
 
+
+@media(max-width:600px){
+
+.qr-box img{
+
+width:300px;
+height:300px;
+
+}
+
+}
 
 </style>
 
@@ -105,28 +122,31 @@ font-size:20px;
 <div class="box">
 
 
+<div class="logo">
+CINEMATIC MONYAA
+</div>
+
+
 <h1>
-Unlock Your Video
+Payment
 </h1>
 
 
-<p>
-WhatsApp वर मिळालेला Password टाका
-</p>
+<div class="qr-box">
+
+<img id="qrImage" src="IMG_4153.jpeg">
+
+</div>
 
 
-<input 
-type="password" 
-id="password" 
-placeholder="Enter Password">
-
-
-<button onclick="unlockVideo()">
-Unlock Your Video
+<button class="download" onclick="downloadQR()">
+Download QR
 </button>
 
 
-<div id="error"></div>
+<button onclick="location.href='unlock.html'">
+Payment Done
+</button>
 
 
 </div>
@@ -135,22 +155,17 @@ Unlock Your Video
 
 <script>
 
-function unlockVideo(){
+function downloadQR(){
 
-let pass = document.getElementById("password").value;
+let image=document.getElementById("qrImage").src;
 
+let link=document.createElement("a");
 
-if(pass=="1234"){
+link.href=image;
 
-window.location.href="success.html";
+link.download="Payment_QR.jpeg";
 
-}
-
-else{
-
-document.getElementById("error").innerHTML="Wrong Password!";
-
-}
+link.click();
 
 }
 
