@@ -1,70 +1,56 @@
 <!DOCTYPE html>
 <html>
 <head>
-
-<title>Premium Cinematic Instructions</title>
-
-<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@500;700&display=swap" rel="stylesheet">
+<title>Payment Instructions</title>
 
 <style>
-
-*{
-margin:0;
-padding:0;
-box-sizing:border-box;
-font-family:'Poppins',sans-serif;
-}
-
 body{
-background:#000;
-color:white;
-min-height:100vh;
-display:flex;
-justify-content:center;
-align-items:center;
-padding:20px;
+    margin:0;
+    padding:0;
+    background:#000;
+    color:white;
+    font-family:Arial, sans-serif;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    min-height:100vh;
 }
 
 .box{
-background:#111;
-padding:45px;
-border-radius:35px;
-border:3px solid #FFD700;
-max-width:750px;
-width:95%;
-text-align:center;
-box-shadow:0 0 25px rgba(255,215,0,0.3);
+    width:90%;
+    max-width:450px;
+    background:#111;
+    padding:25px;
+    border-radius:20px;
+    text-align:center;
+    box-shadow:0 0 20px #ff0000;
 }
 
 h1{
-color:#FFD700;
-font-size:40px;
-margin-bottom:30px;
+    color:#ff0000;
 }
 
 p{
-font-size:22px;
-line-height:1.8;
-margin-bottom:20px;
+    font-size:16px;
+    line-height:1.6;
 }
 
-.warning{
-color:#ff4444;
-font-weight:bold;
+.note{
+    background:#222;
+    padding:15px;
+    border-radius:15px;
+    margin-top:20px;
 }
 
-.btn{
-display:inline-block;
-margin-top:30px;
-padding:18px 60px;
-background:#00c853;
-color:white;
-border-radius:50px;
-text-decoration:none;
-font-size:24px;
-font-weight:bold;
+button{
+    margin-top:20px;
+    padding:12px 25px;
+    border:none;
+    border-radius:30px;
+    background:red;
+    color:white;
+    font-size:16px;
 }
-
 </style>
 
 </head>
@@ -73,31 +59,35 @@ font-weight:bold;
 
 <div class="box">
 
-<h1>📌 Important Instructions</h1>
+<h1>Payment Instructions</h1>
 
 <p>
-कृपया Payment करण्याआधी खालील सूचना वाचा.
+आपला cinematic video unlock करण्यासाठी खालील steps follow करा.
 </p>
 
-<p class="warning">
-⚠️ Partial Payment करू नका.
-</p>
+<div class="note">
 
 <p>
-QR Code वर पूर्ण Payment करा.
+✅ QR वर दिलेली पूर्ण रक्कमच payment करा.
 </p>
 
 <p>
-Payment Complete झाल्यानंतर तुम्हाला Video Unlock Password WhatsApp वर मिळेल.
+❌ Partial payment करू नका.
 </p>
 
 <p>
-Password टाकल्यानंतर तुमचा Premium Cinematic Video पाहता येईल.
+Payment झाल्यानंतर screenshot WhatsApp वर पाठवा.
 </p>
 
-<a class="btn" href="payment.html">
-Continue
-</a>
+<p>
+Payment verify झाल्यावर तुम्हाला video unlock करण्यासाठी password पाठवला जाईल.
+</p>
+
+</div>
+
+<button onclick="location.href='payment.html'">
+Continue Payment
+</button>
 
 </div>
 
