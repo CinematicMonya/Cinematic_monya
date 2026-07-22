@@ -61,7 +61,7 @@ outline:none;
 .btn{
 margin-top:30px;
 padding:18px 60px;
-background:#00C853;
+background:#FF0000;
 color:#fff;
 border:0;
 border-radius:50px;
@@ -71,7 +71,7 @@ cursor:pointer;
 transition:.3s;
 }
 .btn:hover{
-background:#00A844;
+background:#CC0000;
 }
 #error{
 color:red;
@@ -89,7 +89,7 @@ font-size:20px;
 <input id="password" type="password" placeholder="Enter Password">
 <br>
 <button class="btn" onclick="checkPassword()">
-🟢 Access Your Video
+🔴 Unlock Your Video
 </button>
 <p id="error">
 Wrong Password ❌
@@ -97,11 +97,10 @@ Wrong Password ❌
 </div>
 <script>
 function checkPassword(){
-let pass = document.getElementById("password").value;
-if(pass === "Free"){
+let pass=document.getElementById("password").value;
+if(pass==="Free"){
 window.location.href="success.html";
-}
-else{
+}else{
 document.getElementById("error").style.display="block";
 }
 }
