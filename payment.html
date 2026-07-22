@@ -84,10 +84,12 @@ font-weight:bold;
 }
 
 
+/* BIG QR */
+
 .qr-box{
 
 background:white;
-padding:20px;
+padding:25px;
 border-radius:25px;
 display:inline-block;
 
@@ -96,8 +98,8 @@ display:inline-block;
 
 .qr-box img{
 
-width:380px;
-height:380px;
+width:500px;
+height:500px;
 object-fit:contain;
 
 }
@@ -122,6 +124,18 @@ font-weight:bold;
 
 background:#222;
 border:2px solid red;
+
+}
+
+
+@media(max-width:600px){
+
+.qr-box img{
+
+width:320px;
+height:320px;
+
+}
 
 }
 
@@ -178,11 +192,13 @@ Amount
 Scan QR Code
 </h2>
 
+
 <div class="qr-box">
 
 <img id="qrImage" src="IMG_4153.jpeg">
 
 </div>
+
 
 </div>
 
