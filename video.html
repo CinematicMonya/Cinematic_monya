@@ -41,9 +41,10 @@ color:#ccc;
 margin-bottom:20px;
 }
 
-video{
+iframe{
 width:100%;
-max-width:900px;
+height:550px;
+border:none;
 border-radius:20px;
 box-shadow:0 0 30px red;
 background:#000;
@@ -69,8 +70,8 @@ transform:scale(1.05);
 
 @media(max-width:768px){
 
-video{
-width:100%;
+iframe{
+height:250px;
 }
 
 h1{
@@ -96,14 +97,15 @@ padding:12px 28px;
 
 <p>Your Premium Cinematic Video</p>
 
-<video controls>
-<source src="video.mp4" type="video/mp4">
-Your browser does not support the video tag.
-</video>
+<iframe
+src="https://drive.google.com/file/d/1B5ee5VFjCh8IShGNKUIzPYicIJFI9PAs/preview"
+allow="autoplay">
+</iframe>
 
 <br><br>
 
-<a class="download-btn" href="video.mp4" download>
+<a class="download-btn"
+href="https://drive.google.com/uc?export=download&id=1B5ee5VFjCh8IShGNKUIzPYicIJFI9PAs">
 ⬇ Download Video
 </a>
 
