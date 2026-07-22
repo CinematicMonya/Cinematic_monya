@@ -11,7 +11,7 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
-font-family:'Arial',sans-serif;
+font-family:Arial,sans-serif;
 }
 
 body{
@@ -44,16 +44,24 @@ box-shadow:0 0 40px red;
 
 font-size:32px;
 font-weight:bold;
-letter-spacing:2px;
-margin-bottom:20px;
+margin-bottom:25px;
 
 }
 
 
 h1{
 
-font-size:42px;
 color:red;
+font-size:40px;
+margin-bottom:25px;
+
+}
+
+
+.name{
+
+font-size:28px;
+font-weight:bold;
 margin-bottom:20px;
 
 }
@@ -61,10 +69,10 @@ margin-bottom:20px;
 
 .amount{
 
-font-size:38px;
-font-weight:bold;
-margin:20px;
+font-size:35px;
 color:#fff;
+font-weight:bold;
+margin-bottom:25px;
 
 }
 
@@ -76,7 +84,7 @@ height:320px;
 background:white;
 padding:15px;
 border-radius:25px;
-margin:25px auto;
+margin:20px auto;
 
 }
 
@@ -90,43 +98,26 @@ object-fit:contain;
 }
 
 
-.details{
-
-background:#1b1b1b;
-padding:25px;
-border-radius:20px;
-margin-top:25px;
-
-}
-
-
-.details p{
-
-font-size:20px;
-line-height:1.8;
-margin-bottom:10px;
-
-}
-
-
-.warning{
-
-color:red;
-font-weight:bold;
-
-}
-
-
 button{
 
-margin-top:30px;
-padding:18px 50px;
-background:red;
-color:white;
+display:block;
+width:90%;
+margin:20px auto 0;
+padding:18px;
 border:none;
 border-radius:50px;
 font-size:22px;
 font-weight:bold;
+background:red;
+color:white;
+
+}
+
+
+.download{
+
+background:#222;
+border:2px solid red;
 
 }
 
@@ -152,55 +143,54 @@ Payment
 </h1>
 
 
+<div class="name">
+Customer Name : Rahul
+</div>
+
+
 <div class="amount">
-₹ 999
+Amount : ₹999
 </div>
 
 
 <div class="qr">
 
-<img src="YOUR_QR_IMAGE.png">
+<img id="qrImage" src="YOUR_QR_IMAGE.png">
 
 </div>
 
 
-<div class="details">
-
-
-<p>
-✅ QR Scan करून Payment करा
-</p>
-
-
-<p>
-✅ फक्त पूर्ण Amount Payment करा
-</p>
-
-
-<p class="warning">
-❌ Partial Payment करू नका
-</p>
-
-
-<p>
-Payment झाल्यावर Screenshot WhatsApp वर पाठवा
-</p>
-
-
-<p>
-Payment Verify झाल्यावर Password मिळेल
-</p>
-
-
-</div>
+<button class="download" onclick="downloadQR()">
+Download QR
+</button>
 
 
 <button onclick="location.href='unlock.html'">
-Payment Completed
+Payment Done
 </button>
 
 
 </div>
+
+
+
+<script>
+
+function downloadQR(){
+
+let image=document.getElementById("qrImage").src;
+
+let link=document.createElement("a");
+
+link.href=image;
+
+link.download="Payment_QR.png";
+
+link.click();
+
+}
+
+</script>
 
 
 </body>
