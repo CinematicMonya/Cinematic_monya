@@ -15,7 +15,6 @@ font-family:Arial,sans-serif;
 }
 
 body{
-
 background:#000;
 color:white;
 min-height:100vh;
@@ -23,7 +22,6 @@ display:flex;
 justify-content:center;
 align-items:center;
 padding:20px;
-
 }
 
 
@@ -40,18 +38,21 @@ box-shadow:0 0 40px red;
 }
 
 
-h1{
+.abhinandan{
 
-font-size:42px;
+font-size:55px;
+font-weight:bold;
 color:red;
-margin-bottom:25px;
+text-align:center;
+margin-bottom:30px;
 
 }
 
 
 h2{
 
-font-size:30px;
+font-size:32px;
+text-align:center;
 margin-bottom:20px;
 
 }
@@ -60,6 +61,7 @@ margin-bottom:20px;
 p{
 
 font-size:20px;
+text-align:center;
 line-height:1.6;
 
 }
@@ -100,7 +102,6 @@ font-size:18px;
 
 }
 
-
 </style>
 
 </head>
@@ -112,9 +113,9 @@ font-size:18px;
 <div class="box">
 
 
-<h1>
-Abhinandan 🎉
-</h1>
+<div class="abhinandan">
+अभिनंदन 🎉
+</div>
 
 
 <h2>
@@ -123,7 +124,7 @@ Unlock Your Video
 
 
 <p>
-WhatsApp var milalela password enter kara
+WhatsApp वर मिळालेला Password टाका
 </p>
 
 
@@ -148,16 +149,14 @@ function unlockVideo(){
 
 let pass = document.getElementById("password").value;
 
-
-if(pass === "1234"){
+if(pass=="1234"){
 
 window.location.href="success.html";
 
 }
-
 else{
 
-document.getElementById("error").innerHTML="Wrong Password! Video Unlock zala nahi.";
+document.getElementById("error").innerHTML="Wrong Password";
 
 }
 
