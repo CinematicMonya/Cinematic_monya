@@ -1,26 +1,155 @@
 <!DOCTYPE html>
 <html>
 
-<body style="background:#000;color:white;text-align:center;padding:40px;font-family:Arial;">
+<head>
 
-<h1 style="color:gold;">🔐 Enter Password</h1>
+<title>Unlock Your Video</title>
 
-<input id="pass" type="password" placeholder="Password">
+<style>
 
-<br><br>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+}
 
-<button onclick="check()">
-Unlock Video
+body{
+
+background:#000;
+color:white;
+min-height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+padding:20px;
+
+}
+
+
+.box{
+
+width:95%;
+max-width:600px;
+background:#111;
+padding:45px;
+border-radius:30px;
+text-align:center;
+box-shadow:0 0 40px red;
+
+}
+
+
+h1{
+
+font-size:42px;
+color:red;
+margin-bottom:25px;
+
+}
+
+
+h2{
+
+font-size:30px;
+margin-bottom:20px;
+
+}
+
+
+p{
+
+font-size:20px;
+line-height:1.6;
+
+}
+
+
+input{
+
+margin-top:30px;
+width:90%;
+padding:18px;
+border-radius:50px;
+border:none;
+font-size:20px;
+text-align:center;
+
+}
+
+
+button{
+
+margin-top:30px;
+padding:18px 45px;
+border:none;
+border-radius:50px;
+background:red;
+color:white;
+font-size:22px;
+font-weight:bold;
+
+}
+
+
+#error{
+
+color:red;
+margin-top:20px;
+font-size:18px;
+
+}
+
+
+</style>
+
+</head>
+
+
+<body>
+
+
+<div class="box">
+
+
+<h1>
+Abhinandan 🎉
+</h1>
+
+
+<h2>
+Unlock Your Video
+</h2>
+
+
+<p>
+WhatsApp var milalela password enter kara
+</p>
+
+
+<input type="password" id="password" placeholder="Enter Password">
+
+
+<button onclick="unlockVideo()">
+Unlock Your Video
 </button>
+
+
+<div id="error"></div>
+
+
+</div>
+
 
 
 <script>
 
-function check(){
+function unlockVideo(){
 
-let password="PRASHANT2026";
+let pass = document.getElementById("password").value;
 
-if(document.getElementById("pass").value==password){
+
+if(pass === "1234"){
 
 window.location.href="success.html";
 
@@ -28,7 +157,7 @@ window.location.href="success.html";
 
 else{
 
-alert("Wrong Password");
+document.getElementById("error").innerHTML="Wrong Password! Video Unlock zala nahi.";
 
 }
 
@@ -36,5 +165,7 @@ alert("Wrong Password");
 
 </script>
 
+
 </body>
+
 </html>
